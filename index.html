@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Signal Processing for Haptic Surface Modeling: a Review.">
+  <meta name="keywords" content="Haptic Surface Understanding, Signal Processing, Virtual Reality">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SplatTouch</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PMXG52KP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'GTM-PMXG52KP');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="http://mmlabsites.disi.unitn.it/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/mmlab-cv/">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Signal Processing for Haptic Surface Modeling: a Review</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=XVlen3cAAAAJ&hl=it&oi=ao">Antonio Luigi Stefani</a><sup>1,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=I6vOrqkAAAAJ&hl=it&oi=ao">Niccolò Bisagno</a><sup>1,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=KF9OqSMAAAAJ&hl=it&oi=ao">Andrea Rosani</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=mR1GK28AAAAJ&hl=it&oi=ao">Nicola Conci</a><sup>1,3</sup>,
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=fdlZC0oAAAAJ&hl=it">Francesco De Natale</a><sup>1,3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Trento,</span>
+            <span class="author-block"><sup>2</sup>Free University of Bozen-Bolzano</span>
+            <span class="author-block"><sup>3</sup>CNIT</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                  <a href="static/assets/SignalProcessingForHapticSurfaceModelingAReview.pdf"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <div class="content has-text-justified">
+          <h2 class="title is-3">Teaser</h2>
+          <img src="./static/images/teaser.png"
+            alt="Overview."/>
+            <p>The haptic processing pipeline consists of 5 main steps: sensors to acquire the data, processing and modeling to store acquired data, communication to transmit information associated with the collected signals, haptic devices to render the haptic feedback to the user, and perception that studies the factor that influence the haptic experience of the user.</p>
+            <p>Our survey focuses on the processing and modeling step.</p>
+      </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Haptic feedback has been integrated into Virtual and Augmented Reality, complementing acoustic and visual information and contributing to an all-round immersive experience in multiple fields, spanning from the medical domain to entertainment and gaming. Haptic technologies involve complex cross-disciplinary research that encompasses sensing, data representation, interactive rendering, perception, and quality of experience. The standard processing pipeline, consists of (I) sensing physical features in the real world using a transducer, (II) modeling and storing the collected information in some digital format, (III) communicating the information, and finally, (IV) rendering the haptic information through appropriate devices, thus producing a user experience (V) perceptually close to the original physical world. Among these areas, sensing, rendering and perception have been deeply investigated and are the subject of different comprehensive surveys available in the literature. Differently, research dealing with haptic surface modeling and data representation still lacks a comprehensive dissection. In this work, we aim at providing an overview on modeling and representation of haptic surfaces from a signal processing perspective, covering the aspects that lie in between haptic information acquisition on one side and rendering and perception on the other side. We analyze, categorize, and compare research papers that address the haptic surface modeling and data representation, pointing out existing gaps and possible research directions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- NOCS scene Representation. -->
+      <div class="column has-text-centered">
+        <div class="content has-text-justified">
+          <h2 class="title is-3">Real world objects representation in the physical and the perceptual spaces</h2>
+          <img src="./static/images/feature_spaces.png"
+            alt="Feature spaces."/>
+            <p>The classic signal processing pipeline (top row) aims at mapping a physical phenomenon to a physical feature space such that a similar experience of the phenomenon can be delivered to the user in the perception feature space (bottom row). While the pipeline is well-established in both the visual and acoustic domains, it still lacks a common standard in the haptic domain. In the example in bottom row illustrating the section of a tree, the <b><span style="color: #ff0000">red</span></b> line is the roughness, the <b><span style="color: #00ff00">green</span></b> line is the bumpiness, the <b><span style="color: #0000ff">blue</span></b> line represents the stiffness, and the <b><span style="color: #404040">dark gray</span></b> line is the friction.</p>
+        </div>
+      </div>
+      <!--/ NOCS scene Representation. -->
+    </div>
+</section>
+
+<!-- image carousel -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h2 class="title is-3">The paper we analyzed</h2>
+        <div class="carousel">
+          <div class="carousel-item has-background">
+            <img src="./static/images/table_modeling.png" alt="modeling."/>
+          </div>
+          <div class="carousel-item has-background">
+            <img src="./static/images/table_dataset.png" alt="dataset."/>
+          </div>
+          <div class="carousel-item has-background">
+            <img src="./static/images/table_task.png" alt="task."/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@article{stefani2024signal,
+  title={Signal Processing for Haptic Surface Modeling: a Review},
+  author={Stefani, Antonio Luigi and Bisagno, Niccol{\`o} and Rosani, Andrea and Conci, Nicola and De Natale, Francesco},
+  journal={arXiv preprint arXiv:2409.20142},
+  year={2024}
+}
+    </code></pre>
+  </div>
+</section>
+
+
+</body>
+</html>
