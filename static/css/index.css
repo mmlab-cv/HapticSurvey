@@ -155,3 +155,43 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.clustermap-section {
+  padding-top: 1rem;
+}
+
+.clustermap-card {
+  border: 1px solid #dbe4f0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%);
+  box-shadow: 0 10px 30px rgba(34, 68, 132, 0.08);
+}
+
+.clustermap-subtitle {
+  text-align: center;
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+  color: #425466;
+}
+
+.clustermap-embed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 240px;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #dbe4f0;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .clustermap-card {
+    padding: 1rem;
+  }
+
+  .clustermap-embed {
+    min-height: 180px;
+  }
+}
