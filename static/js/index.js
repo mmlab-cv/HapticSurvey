@@ -6,12 +6,22 @@ var NUM_INTERP_FRAMES = 240;
 var interp_images = [];
 
 function loadVisitorsMap() {
-  var container = document.getElementById('mapmyvisitors-container');
+  var container = document.querySelector('[data-mapmyvisitors-container]') ||
+    document.getElementById('mapmyvisitors-container') ||
+    document.getElementById('visitormap-container') ||
+    document.getElementById('visitor-map-container');
   if (!container) {
     return;
   }
 
-  var fallback = document.getElementById('mapmyvisitors-fallback');
+  if (container.querySelector('#mapmyvisitors') || document.getElementById('mapmyvisitors')) {
+    return;
+  }
+
+  var fallback = document.querySelector('[data-mapmyvisitors-fallback]') ||
+    document.getElementById('mapmyvisitors-fallback') ||
+    document.getElementById('visitormap-fallback') ||
+    document.getElementById('visitor-map-fallback');
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.id = 'mapmyvisitors';
