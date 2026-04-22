@@ -177,6 +177,8 @@ body {
 
 .clustermap-embed {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   justify-content: center;
   align-items: center;
   min-height: 240px;
@@ -184,6 +186,13 @@ body {
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid #dbe4f0;
   border-radius: 12px;
+}
+
+.clustermap-fallback {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

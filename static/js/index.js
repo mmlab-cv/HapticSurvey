@@ -4,6 +4,28 @@ var INTERP_BASE = "./static/interpolation/stacked";
 var NUM_INTERP_FRAMES = 240;
 
 var interp_images = [];
+
+function loadVisitorsMap() {
+  var container = document.getElementById('mapmyvisitors-container');
+  if (!container) {
+    return;
+  }
+
+  var fallback = document.getElementById('mapmyvisitors-fallback');
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.id = 'mapmyvisitors';
+  script.src = 'https://mapmyvisitors.com/map.js?d=IZRIQdiG1IdYBbRcOhe54xz_kUU7Dh5fnqnOqb009dM&cl=ffffff&w=a';
+  script.async = true;
+  script.onerror = function() {
+    if (fallback) {
+      fallback.hidden = false;
+    }
+  };
+
+  container.appendChild(script);
+}
+
 function preloadInterpolationImages() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
     var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
@@ -74,5 +96,6 @@ $(document).ready(function() {
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
+    loadVisitorsMap();
 
 })

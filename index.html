@@ -262,7 +262,13 @@
           <h2 class="title is-3">Global Reach</h2>
           <p class="clustermap-subtitle">A live view of where readers are visiting this page from.</p>
           <div class="clustermap-embed" aria-label="Visitor map">
-            <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=IZRIQdiG1IdYBbRcOhe54xz_kUU7Dh5fnqnOqb009dM&cl=ffffff&w=a"></script>
+            <div id="mapmyvisitors-container"></div>
+            <p id="mapmyvisitors-fallback" class="clustermap-fallback" hidden>
+              The live map is temporarily unavailable. Please disable content blockers for this page.
+            </p>
+            <noscript>
+              <p class="clustermap-fallback">Enable JavaScript to view the live visitor map.</p>
+            </noscript>
           </div>
         </div>
       </div>
