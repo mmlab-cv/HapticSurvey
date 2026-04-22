@@ -188,6 +188,12 @@ body {
   border-radius: 12px;
 }
 
+.clustermap-script-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .clustermap-fallback {
   margin: 0;
   color: #6b7280;
